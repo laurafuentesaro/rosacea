@@ -1,0 +1,2138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Antiinflamatorio Rosácea - Recuperación Postparto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black: #000000;
+            --white: #ffffff;
+            --gray-1: #fafafa;
+            --gray-2: #f5f5f5;
+            --gray-3: #eeeeee;
+            --gray-4: #e5e5e5;
+            --gray-5: #d4d4d4;
+            --gray-6: #a3a3a3;
+            --gray-7: #737373;
+            --gray-8: #525252;
+            --gray-9: #404040;
+            --gray-10: #262626;
+            --gray-11: #171717;
+            --gray-12: #0a0a0a;
+            
+            --blue: #0070f3;
+            --blue-light: #3291ff;
+            --blue-lighter: #79b8ff;
+            --green: #0cce6b;
+            --green-light: #19e97f;
+            --orange: #ff6a00;
+            --red: #ff0000;
+            --red-light: #ff4444;
+            
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12);
+            
+            --radius-sm: 6px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+            color: var(--gray-11);
+            background-color: var(--white);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 48px;
+            padding: 48px 0;
+            border-bottom: 1px solid var(--gray-3);
+        }
+        
+        h1 {
+            font-size: 48px;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            margin-bottom: 16px;
+            background: linear-gradient(to right, var(--black) 0%, var(--gray-8) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .subtitle {
+            font-size: 20px;
+            font-weight: 400;
+            color: var(--gray-7);
+            letter-spacing: -0.02em;
+        }
+        
+        /* Stats Bar */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 48px;
+        }
+        
+        .stat-card {
+            background: var(--gray-1);
+            border: 1px solid var(--gray-3);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+        
+        .stat-card:hover {
+            border-color: var(--gray-4);
+            transform: translateY(-1px);
+        }
+        
+        .stat-number {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 4px;
+        }
+        
+        .stat-label {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--gray-7);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        /* Day Cards Grid */
+        .week-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+        
+        .day-card {
+            background: var(--white);
+            border: 1px solid var(--gray-3);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+        
+        .day-card:hover {
+            border-color: var(--gray-4);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        
+        .day-header {
+            background: var(--black);
+            color: var(--white);
+            padding: 16px 20px;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: -0.01em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .calories-badge {
+            background: var(--red);
+            color: var(--white);
+            padding: 4px 12px;
+            border-radius: 999px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .day-content {
+            padding: 24px;
+        }
+        
+        /* Meals */
+        .meal {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--gray-3);
+        }
+        
+        .meal:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .meal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        
+        .meal-title {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--gray-8);
+        }
+        
+        .meal-calories {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--gray-6);
+        }
+        
+        .meal-items {
+            font-size: 13px;
+            color: var(--gray-9);
+            line-height: 1.8;
+        }
+        
+        .meal-item {
+            display: flex;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+        
+        .meal-item::before {
+            content: "→";
+            color: var(--gray-5);
+            margin-right: 8px;
+            font-size: 12px;
+        }
+        
+        .portion {
+            color: var(--orange);
+            font-weight: 600;
+            font-size: 12px;
+        }
+        
+        /* Substitution Box */
+        .substitution {
+            background: var(--green-light);
+            background: linear-gradient(135deg, rgba(12, 206, 107, 0.1) 0%, rgba(12, 206, 107, 0.05) 100%);
+            border: 1px solid rgba(12, 206, 107, 0.2);
+            border-radius: var(--radius-md);
+            padding: 12px;
+            margin-top: 12px;
+            font-size: 12px;
+            color: var(--gray-9);
+        }
+        
+        .substitution-label {
+            font-weight: 600;
+            color: var(--green);
+            margin-right: 4px;
+        }
+        
+        /* Day Footer */
+        .day-footer {
+            background: var(--gray-1);
+            padding: 16px 24px;
+            border-top: 1px solid var(--gray-3);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .footer-item {
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+            color: var(--gray-7);
+        }
+        
+        .footer-icon {
+            margin-right: 8px;
+            font-size: 14px;
+        }
+        
+        .snack-note {
+            background: var(--orange);
+            background: linear-gradient(135deg, rgba(255, 106, 0, 0.1) 0%, rgba(255, 106, 0, 0.05) 100%);
+            border: 1px solid rgba(255, 106, 0, 0.2);
+            border-radius: var(--radius-sm);
+            padding: 8px 12px;
+            font-size: 11px;
+            color: var(--gray-8);
+        }
+        
+        /* Formula Section */
+        .formula-section {
+            background: var(--gray-1);
+            border: 1px solid var(--gray-3);
+            border-radius: var(--radius-xl);
+            padding: 48px;
+            margin-bottom: 48px;
+        }
+        
+        .section-title {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+        
+        .formula-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+        }
+        
+        .formula-card {
+            background: var(--white);
+            border: 1px solid var(--gray-3);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+        
+        .formula-card:hover {
+            border-color: var(--gray-4);
+            transform: translateY(-1px);
+        }
+        
+        .formula-number {
+            width: 40px;
+            height: 40px;
+            background: var(--black);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+            margin: 0 auto 16px;
+        }
+        
+        .formula-title {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--gray-8);
+            margin-bottom: 12px;
+        }
+        
+        .formula-content {
+            font-size: 13px;
+            color: var(--gray-7);
+            line-height: 1.8;
+        }
+        
+        .formula-content strong {
+            color: var(--black);
+            font-weight: 600;
+        }
+        
+        /* Tips Section */
+        .tips-section {
+            margin-bottom: 48px;
+        }
+        
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+        }
+        
+        .tip-card {
+            background: var(--white);
+            border: 1px solid var(--gray-3);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            transition: all 0.2s ease;
+        }
+        
+        .tip-card:hover {
+            border-color: var(--blue);
+            transform: translateY(-1px);
+        }
+        
+        .tip-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--gray-1);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+        
+        .tip-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--black);
+            margin-bottom: 8px;
+        }
+        
+        .tip-text {
+            font-size: 13px;
+            color: var(--gray-7);
+            line-height: 1.6;
+        }
+        
+        /* Alert Box */
+        .alert {
+            background: var(--red-light);
+            background: linear-gradient(135deg, rgba(255, 0, 0, 0.1) 0%, rgba(255, 0, 0, 0.05) 100%);
+            border: 1px solid rgba(255, 0, 0, 0.2);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            margin-bottom: 48px;
+        }
+        
+        .alert-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--red);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .alert-icon {
+            margin-right: 8px;
+        }
+        
+        .alert ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .alert li {
+            font-size: 13px;
+            color: var(--gray-8);
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .alert li::before {
+            content: "•";
+            position: absolute;
+            left: 8px;
+            color: var(--red-light);
+        }
+        
+        /* Shopping List Section */
+        .shopping-section {
+            margin-bottom: 48px;
+        }
+        
+        .shopping-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+        
+        .shopping-card {
+            background: var(--white);
+            border: 1px solid var(--gray-3);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+        
+        .shopping-card:hover {
+            border-color: var(--gray-4);
+            transform: translateY(-1px);
+        }
+        
+        .shopping-header {
+            background: var(--gray-1);
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid var(--gray-3);
+        }
+        
+        .shopping-icon {
+            font-size: 20px;
+        }
+        
+        .shopping-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gray-9);
+            margin: 0;
+        }
+        
+        .shopping-list {
+            padding: 20px;
+        }
+        
+        .shopping-item {
+            font-size: 13px;
+            color: var(--gray-8);
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+        
+        .shopping-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .shopping-notes {
+            background: var(--gray-1);
+            border: 1px solid var(--gray-3);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+        }
+        
+        .notes-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gray-9);
+            margin-bottom: 16px;
+        }
+        
+        .notes-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .notes-list li {
+            font-size: 13px;
+            color: var(--gray-7);
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .notes-list li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--gray-5);
+        }
+        
+        /* Recipes Section */
+        .recipes-section {
+            margin-bottom: 48px;
+        }
+        
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 24px;
+        }
+        
+        .recipe-card {
+            background: var(--white);
+            border: 1px solid var(--gray-3);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+        
+        .recipe-card:hover {
+            border-color: var(--gray-4);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .recipe-header {
+            background: var(--gray-1);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--gray-3);
+        }
+        
+        .recipe-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--gray-9);
+            margin: 0;
+        }
+        
+        .recipe-time {
+            background: var(--black);
+            color: var(--white);
+            padding: 4px 12px;
+            border-radius: 999px;
+            font-size: 11px;
+            font-weight: 500;
+        }
+        
+        .recipe-content {
+            padding: 24px;
+        }
+        
+        .ingredients, .preparation {
+            margin-bottom: 20px;
+        }
+        
+        .ingredients:last-child, .preparation:last-child {
+            margin-bottom: 0;
+        }
+        
+        .recipe-content h4 {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--gray-8);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .ingredients ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .ingredients li {
+            font-size: 13px;
+            color: var(--gray-7);
+            margin-bottom: 6px;
+            padding-left: 16px;
+            position: relative;
+        }
+        
+        .ingredients li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--green);
+        }
+        
+        .preparation ol {
+            list-style: none;
+            padding: 0;
+            counter-reset: step-counter;
+        }
+        
+        .preparation li {
+            font-size: 13px;
+            color: var(--gray-7);
+            margin-bottom: 8px;
+            padding-left: 28px;
+            position: relative;
+            counter-increment: step-counter;
+        }
+        
+        .preparation li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background: var(--gray-2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--gray-7);
+        }
+        
+        /* Semáforo Section */
+        .semaforo-section {
+            margin-bottom: 48px;
+        }
+        
+        .semaforo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+        
+        .semaforo-card {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: all 0.2s ease;
+            border: 2px solid;
+        }
+        
+        .semaforo-card.verde {
+            border-color: var(--green);
+            background: linear-gradient(to bottom, rgba(12, 206, 107, 0.05) 0%, rgba(12, 206, 107, 0.02) 100%);
+        }
+        
+        .semaforo-card.amarillo {
+            border-color: var(--orange);
+            background: linear-gradient(to bottom, rgba(255, 106, 0, 0.05) 0%, rgba(255, 106, 0, 0.02) 100%);
+        }
+        
+        .semaforo-card.rojo {
+            border-color: var(--red);
+            background: linear-gradient(to bottom, rgba(255, 0, 0, 0.05) 0%, rgba(255, 0, 0, 0.02) 100%);
+        }
+        
+        .semaforo-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .semaforo-header {
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid var(--gray-3);
+        }
+        
+        .semaforo-card.verde .semaforo-header {
+            background: rgba(12, 206, 107, 0.1);
+        }
+        
+        .semaforo-card.amarillo .semaforo-header {
+            background: rgba(255, 106, 0, 0.1);
+        }
+        
+        .semaforo-card.rojo .semaforo-header {
+            background: rgba(255, 0, 0, 0.1);
+        }
+        
+        .semaforo-icon {
+            font-size: 24px;
+        }
+        
+        .semaforo-title {
+            font-size: 15px;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: -0.01em;
+        }
+        
+        .semaforo-card.verde .semaforo-title {
+            color: var(--green);
+        }
+        
+        .semaforo-card.amarillo .semaforo-title {
+            color: var(--orange);
+        }
+        
+        .semaforo-card.rojo .semaforo-title {
+            color: var(--red);
+        }
+        
+        .semaforo-content {
+            padding: 24px;
+        }
+        
+        .categoria {
+            margin-bottom: 24px;
+        }
+        
+        .categoria:last-child {
+            margin-bottom: 0;
+        }
+        
+        .categoria h4 {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--gray-8);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .categoria ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .categoria li {
+            font-size: 13px;
+            color: var(--gray-7);
+            margin-bottom: 6px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .semaforo-reglas {
+            background: var(--gray-1);
+            border: 1px solid var(--gray-3);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+        }
+        
+        .reglas-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gray-9);
+            margin-bottom: 16px;
+        }
+        
+        .semaforo-reglas ol {
+            list-style: none;
+            padding: 0;
+            counter-reset: rule-counter;
+        }
+        
+        .semaforo-reglas li {
+            font-size: 13px;
+            color: var(--gray-7);
+            margin-bottom: 8px;
+            padding-left: 28px;
+            position: relative;
+            counter-increment: rule-counter;
+        }
+        
+        .semaforo-reglas li::before {
+            content: counter(rule-counter) ".";
+            position: absolute;
+            left: 0;
+            font-weight: 600;
+            color: var(--gray-8);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 16px;
+            }
+            
+            h1 {
+                font-size: 32px;
+            }
+            
+            .subtitle {
+                font-size: 16px;
+            }
+            
+            .week-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .formula-section {
+                padding: 24px;
+            }
+            
+            .stats-bar {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Plan Antiinflamatorio Rosácea</h1>
+            <p class="subtitle">Protocolo nutricional para energía y salud digestiva</p>
+        </header>
+        
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+            <div class="stat-card">
+                <div class="stat-number">1300</div>
+                <div class="stat-label">Calorías Promedio</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">12h</div>
+                <div class="stat-label">Ayuno Suave</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">2L+</div>
+                <div class="stat-label">Agua Diaria</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">80%</div>
+                <div class="stat-label">Alimentos Seguros</div>
+            </div>
+        </div>
+        
+        <!-- Day Cards -->
+        <div class="week-grid">
+            <!-- Day 1 -->
+            <div class="day-card">
+                <div class="day-header">
+                    <span>Día 1 - Lunes</span>
+                    <span class="calories-badge">1280 cal</span>
+                </div>
+                <div class="day-content">
+                    <div class="meal">
+                        <div class="meal-header">
+                            <h3 class="meal-title">Desayuno</h3>
+                            <span class="meal-calories">380 cal</span>
+                        </div>
+                        <div class="meal-items">
+                            <div class="meal-item">2 huevos revueltos en ghee</div>
+                            <div class="meal-item">1/4 palta <span class="portion">(si toleras)</span></div>
+                            <div class="meal-item">Infusión manzanilla tibia</div>
+                        </div>
+                        <div class="substitution">
+                            <span class="substitution-label">Alt:</span>
+                            Omelette con jamón crudo + semillas de calabaza
+                        </div>
+                    </div>
+                    
+                    <div class="meal">
+                        <div class="meal-header">
+                            <h3 class="meal-title">Almuerzo</h3>
+                            <span class="meal-calories">500 cal</span>
+                        </div>
+                        <div class="meal-items">
+                            <div class="meal-item">Mix lechugas suaves abundante</div>
+                            <div class="meal-item">Pollo orgánico <span class="portion">(150g)</span></div>
+                            <div class="meal-item">Brócoli y zapallitos salteados</div>
+                            <div class="meal-item">2 cdas aceite oliva + semillas</div>
+                        </div>
+                        <div class="substitution">
+                            <span class="substitution-label">Alt:</span>
+                            150g carne magra o pescado blanco
+                        </div>
+                    </div>
+                    
+                    <div class="meal">
+                        <div class="meal-header">
+                            <h3 class="meal-title">Cena</h3>
+                            <span class="meal-calories">400 cal</span>
+                        </div>
+                        <div class="meal-items">
+                            <div class="meal-item">Sopa de caldo de hueso</div>
+                            <div class="meal-item">Albóndigas de carne <span class="portion">(100g)</span></div>
+                            <div class="meal-item">Zucchini y puerro cocidos</div>
+                            <div class="meal-item">1 cda aceite oliva extra</div>
+                        </div>
+                        <div class="substitution">
+                            <span class="substitution-label">Digestivo:</span>
+                            Pescado blanco al vapor con vegetales
+                        </div>
+                    </div>
+                </div>
+                <div class="day-footer">
+                    <div class="footer-item">
+                        <span class="footer-icon">⏱</span>
+                        Ayuno: 20:00 - 8:00 (12h)
+                    </div>
+                    <div class="footer-item">
+                        <span class="footer-icon">💧</span>
+                        Agua + infusión jengibre (2L+)
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Day 2 -->
+            <div class="day-card">
+                <div class="day-header">
+                    <span>Día 2 - Martes</span>
+                    <span class="calories-badge">1320 cal</span>
+                </div>
+                <div class="day-content">
+                    <div class="meal">
+                        <div class="meal-header">
+                            <h3 class="meal-title">Desayuno</h3>
+                            <span class="meal-calories">350 cal</span>
+                        </div>
+                        <div class="meal-items">
+                            <div class="meal-item">Omelette cremoso (2 huevos)</div>
+                            <div class="meal-item">2 fetas jamón crudo</div>
+                            <div class="meal-item">Té verde tibio</div>
+                        </div>
+                        <div class="substitution">
+                            <span class="substitution-label">Rápido:</span>
+                            2 huevos duros + almendras (10 unidades)
+                        </div>
+                    </div>
+                    
+                    <div class="meal">
+                        <div class="meal-header">
+                            <h3 class="meal-title">Almuerzo</h3>
+                            <span class="meal-calories">520 cal</span>
+                        </div>
+                        <div class="meal-items">
+                            <div class="meal-item">Ensalada de pepino y apio</div>
+                            <div class="meal-item">Muslos pollo con piel <span class="portion">(150g)</span></div>
+                            <div class="meal-item">Costra de almendras y semillas</div>
+                            <div class="meal-item">Hongos salteados en ghee</div>
+                        </div>
+                        <div class="substitution">
+                            <span class="substitution-label">Alt:</span>
+                            Carne desmechada con champiñones
+                        </div>
+                    </div>
+                    
+                    <div class="meal">
+                        <div class="meal-header">
+                            <h3 class="meal-title">Cena</h3>
+                            <span class="meal-calories">450 cal</span>
+                        </div>
+                        <div class="meal-items">
+                            <div class="meal-item">Crema de coliflor tibia</div>
+                            <div class="meal-item">Pescado blanco <span class="portion">(150g)</span></div>
+                            <div class="meal-item">Brócoli al vapor</div>
+                            <div class="meal-item">2 cdas aceite oliva</div>
+                        </div>
+                        <div class="substitution">
+                            <span class="substitution-label">Alt:</span>
+                            Sopa cremosa con pollo desmenuzado
+                        </div>
+                    </div>
+                </div>
+                <div class="day-footer">
+                    <div class="footer-item">
+                        <span class="footer-icon">⏱</span>
+                        Ayuno: 12 horas
+                    </div>
+                    <div class="footer-item">
+                        <span class="footer-icon">💧</span>
+                        Agua + té de manzanilla
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Day 3 -->
+            <div class="day-card">
+                <div class="day-header">
+                    <span>Día 3 - Miércoles</span>
+                    <span class="calories-badge">1310 cal</span>
+                </div>
+                <div class="day-content">
+                    <div class="meal">
+                        <div class="meal-header">
+                            <h3 class="meal-title">Desayuno</h3>
+                            <span class="meal-calories">360 cal</span>
+                        </div>
+                        <div class="meal-items">
+                            <div class="meal-item">2 huevos pochados</div>
+                            <div class="meal-item">1 rebanada pan de almendras</div>
+                            <div class="meal-item">Mix vegetales verdes frescos</div>
+                            <div class="meal-item">Infusión de jengibre tibia</div>
+                        </div>
+                        <div class="substitution">
+                            <span class="substitution-label">Var:</span>
+                            Jamón crudo + queso sin lactosa + vegetales
+                        </div>
+                    </div>
+                    
+                    <div class="meal">
+                        <div class="meal-header">
+                            <h3 class="meal-title">Almuerzo</h3>
+                            <span class="meal-calories">480 cal</span>
+                        </div>
+                        <div class="meal-items">
+                            <div class="meal-item">Mix lechugas mantecosa</div>
+                            <div class="meal-item">Salteado carne y vegetales <span class="portion">(150g)</span></div>
+                            <div class="meal-item">Puerro, zucchini, hongos</div>
+                            <div class="meal-item">2 cdas aceite + semillas</div>
+                        </div>
+                        <div class="substitution">
+                            <span class="substitution-label">Simple:</span>
+                            Carne a la plancha + vegetales vapor
+                        </div>
+                    </div>
+                    
+                    <div class="meal">
+                        <div class="meal-header">
+                            <h3 class="meal-title">Cena</h3>
+                            <span class="meal-calories">450 cal</span>
+                        </div>
+                        <div class="meal-items">
+                            <div class="meal-item">Ensalada completa tibia</div>
+                            <div class="meal-item">2 huevos duros</div>
+                            <div class="meal-item">Atún en aceite <span class="portion">(100g)</span></div>
+                            <div class="meal-item">Pepino, lechugas, 1/4 palta</div>
+                        </div>
+                        <div class="substitution">
+                            <span class="substitution-label">Alt:</span>
+                            Pastel de carne individual con huevo
+                        </div>
+                    </div>
+                </div>
+                <div class="day-footer">
+                    <div class="footer-item">
+                        <span class="footer-icon">⏱</span>
+                        Ayuno: 12 horas
+                    </div>
+                    <div class="footer-item">
+                        <span class="footer-icon">💧</span>
+                        Agua con menta fresca
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Day 4 -->
+            <div class="day-card">
+                <div class="day-header">
+                    <span>Día 4 - Jueves</span>
+                    <span class="calories-badge">1310 cal</span>
+                </div>
+                <div class="day-content">
+                    <div class="meal">
+                        <div class="meal-header">
+                            <h3 class="meal-title">Desayuno</h3>
+                            <span class="meal-calories">400 cal</span>
+                        </div>
+                        <div class="meal-items">
+                            <div class="meal-item">2 fetas jamón crudo</div>
+                            <div class="meal-item">1 huevo duro</div>
+                            <div class="meal-item">10 almendras</div>
+                            <div class="meal-item">Infusión manzanilla</div>
+                        </div>
+                        <div class="substitution">
+                            <span class="substitution-label">Alt:</span>
+                            Pan de almendras + ghee + jamón
+                        </div>
+                    </div>
+                    
+                    <div class="meal">
+                        <div class="meal-header">
+                            <h3 class="meal-title">Almuerzo</h3>
+                            <span class="meal-calories">490 cal</span>
+                        </div>
+                        <div class="meal-items">
+                            <div class="meal-item">Base abundante de lechugas</div>
+                            <div class="meal-item">Pescado en papillote <span class="portion">(150g)</span></div>
+                            <div class="meal-item">Juliana de puerro y zucchini</div>
+                            <div class="meal-item">2 cdas aceite oliva + eneldo</div>
+                        </div>
+                        <div class="substitution">
+                            <span class="substitution-label">Alt:</span>
+                            150g pollo al horno con vegetales
+                        </div>
+                    </div>
+                    
+                    <div class="meal">
+                        <div class="meal-header">
+                            <h3 class="meal-title">Cena</h3>
+                            <span class="meal-calories">420 cal</span>
+                        </div>
+                        <div class="meal-items">
+                            <div class="meal-item">Caldo de hueso con vegetales</div>
+                            <div class="meal-item">Carne sellada <span class="portion">(100g)</span></div>
+                            <div class="meal-item">Zapallitos asados</div>
+                            <div class="meal-item">Hongos al romero</div>
+                            <div class="meal-item">Romero + aceite oliva</div>
+                        </div>
+                        <div class="substitution">
+                            <span class="substitution-label">Alt:</span>
+                            Estofado rápido de carne con zucchini
+                        </div>
+                    </div>
+                </div>
+                <div class="day-footer">
+                    <div class="footer-item">
+                        <span class="footer-icon">⏱</span>
+                        Ayuno: 12 horas
+                    </div>
+                    <div class="footer-item">
+                        <span class="footer-icon">💧</span>
+                        Infusión de cúrcuma tibia
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Day 5 -->
+            <div class="day-card">
+                <div class="day-header">
+                    <span>Día 5 - Viernes</span>
+                    <span class="calories-badge">1300 cal</span>
+                </div>
+                <div class="day-content">
+                    <div class="meal">
+                        <div class="meal-header">
+                            <h3 class="meal-title">Desayuno</h3>
+                            <span class="meal-calories">370 cal</span>
+                        </div>
+                        <div class="meal-items">
+                            <div class="meal-item">Revuelto: 2 huevos + calabacín</div>
+                            <div class="meal-item">1 cda ghee</div>
+                            <div class="meal-item">Té verde tibio</div>
+                        </div>
+                        <div class="substitution">
+                            <span class="substitution-label">Alt:</span>
+                            2 huevos pochados + vegetales salteados
+                        </div>
+                    </div>
+                    
+                    <div class="meal">
+                        <div class="meal-header">
+                            <h3 class="meal-title">Almuerzo</h3>
+                            <span class="meal-calories">510 cal</span>
+                        </div>
+                        <div class="meal-items">
+                            <div class="meal-item">Mix de verdes seguros</div>
+                            <div class="meal-item">Pollo con costra <span class="portion">(150g)</span></div>
+                            <div class="meal-item">Almendras molidas + semillas</div>
+                            <div class="meal-item">Brócoli + aceite coco</div>
+                        </div>
+                        <div class="substitution">
+                            <span class="substitution-label">Wok:</span>
+                            Salteado con jengibre fresco
+                        </div>
+                    </div>
+                    
+                    <div class="meal">
+                        <div class="meal-header">
+                            <h3 class="meal-title">Cena</h3>
+                            <span class="meal-calories">420 cal</span>
+                        </div>
+                        <div class="meal-items">
+                            <div class="meal-item">Sopa de vegetales permitidos</div>
+                            <div class="meal-item">Albóndigas <span class="portion">(100g)</span></div>
+                            <div class="meal-item">Brócoli y puerro</div>
+                            <div class="meal-item">2 cdas aceite oliva</div>
+                        </div>
+                        <div class="substitution">
+                            <span class="substitution-label">Alt:</span>
+                            Crema de brócoli con pollo
+                        </div>
+                    </div>
+                </div>
+                <div class="day-footer">
+                    <div class="footer-item">
+                        <span class="footer-icon">⏱</span>
+                        Ayuno: 12 horas
+                    </div>
+                    <div class="footer-item">
+                        <span class="footer-icon">💧</span>
+                        Agua con pepino
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Day 6 -->
+            <div class="day-card">
+                <div class="day-header">
+                    <span>Día 6 - Sábado</span>
+                    <span class="calories-badge">1350 cal</span>
+                </div>
+                <div class="day-content">
+                    <div class="meal">
+                        <div class="meal-header">
+                            <h3 class="meal-title">Desayuno</h3>
+                            <span class="meal-calories">380 cal</span>
+                        </div>
+                        <div class="meal-items">
+                            <div class="meal-item">2 huevos + jamón crudo</div>
+                            <div class="meal-item">12 almendras</div>
+                            <div class="meal-item">Infusión digestiva</div>
+                        </div>
+                        <div class="substitution">
+                            <span class="substitution-label">Finde:</span>
+                            Pan de almendras + jamón + ghee
+                        </div>
+                    </div>
+                    
+                    <div class="meal">
+                        <div class="meal-header">
+                            <h3 class="meal-title">Almuerzo</h3>
+                            <span class="meal-calories">520 cal</span>
+                        </div>
+                        <div class="meal-items">
+                            <div class="meal-item">Mix lechugas y pepino</div>
+                            <div class="meal-item">Hamburguesas caseras <span class="portion">(150g)</span></div>
+                            <div class="meal-item">Vegetales horneados</div>
+                            <div class="meal-item">2 cdas ghee + hierbas</div>
+                        </div>
+                        <div class="substitution">
+                            <span class="substitution-label">Parrilla:</span>
+                            Carne magra + vegetales
+                        </div>
+                    </div>
+                    
+                    <div class="meal">
+                        <div class="meal-header">
+                            <h3 class="meal-title">Cena</h3>
+                            <span class="meal-calories">450 cal</span>
+                        </div>
+                        <div class="meal-items">
+                            <div class="meal-item">Ensalada tibia completa</div>
+                            <div class="meal-item">Pescado <span class="portion">(150g)</span> + limón</div>
+                            <div class="meal-item">Zucchini y brócoli cocidos</div>
+                            <div class="meal-item">Aceite oliva + semillas</div>
+                        </div>
+                        <div class="substitution">
+                            <span class="substitution-label">Rápido:</span>
+                            Atún + huevos + vegetales
+                        </div>
+                    </div>
+                </div>
+                <div class="day-footer">
+                    <div class="footer-item">
+                        <span class="footer-icon">⏱</span>
+                        Ayuno: 12 horas
+                    </div>
+                    <div class="footer-item">
+                        <span class="footer-icon">💧</span>
+                        Agua con canela
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Day 7 -->
+            <div class="day-card">
+                <div class="day-header">
+                    <span>Día 7 - Domingo</span>
+                    <span class="calories-badge">1330 cal</span>
+                </div>
+                <div class="day-content">
+                    <div class="meal">
+                        <div class="meal-header">
+                            <h3 class="meal-title">Desayuno</h3>
+                            <span class="meal-calories">390 cal</span>
+                        </div>
+                        <div class="meal-items">
+                            <div class="meal-item">Omelette cremoso (2 huevos)</div>
+                            <div class="meal-item">1 cda ghee derretido</div>
+                            <div class="meal-item">Infusión manzanilla</div>
+                        </div>
+                        <div class="substitution">
+                            <span class="substitution-label">Domingo:</span>
+                            Pancakes de almendra (sin dulce)
+                        </div>
+                    </div>
+                    
+                    <div class="meal">
+                        <div class="meal-header">
+                            <h3 class="meal-title">Almuerzo</h3>
+                            <span class="meal-calories">520 cal</span>
+                        </div>
+                        <div class="meal-items">
+                            <div class="meal-item">Gran ensalada de base</div>
+                            <div class="meal-item">Carne a la plancha <span class="portion">(150g)</span></div>
+                            <div class="meal-item">Calabaza asada <span class="portion">(80g)</span></div>
+                            <div class="meal-item">Ensalada de repollo</div>
+                        </div>
+                        <div class="substitution">
+                            <span class="substitution-label">Especial:</span>
+                            Pastel de carne y vegetales
+                        </div>
+                    </div>
+                    
+                    <div class="meal">
+                        <div class="meal-header">
+                            <h3 class="meal-title">Cena</h3>
+                            <span class="meal-calories">420 cal</span>
+                        </div>
+                        <div class="meal-items">
+                            <div class="meal-item">Caldo de hueso nutritivo</div>
+                            <div class="meal-item">Pollo desmenuzado <span class="portion">(100g)</span></div>
+                            <div class="meal-item">Vegetales suaves cocidos</div>
+                            <div class="meal-item">Aceite + perejil fresco</div>
+                        </div>
+                        <div class="substitution">
+                            <span class="substitution-label">Simple:</span>
+                            Pescado vapor + puré de zapallo
+                        </div>
+                    </div>
+                </div>
+                <div class="day-footer">
+                    <div class="footer-item">
+                        <span class="footer-icon">⏱</span>
+                        Ayuno: 12 horas
+                    </div>
+                    <div class="footer-item">
+                        <span class="footer-icon">💧</span>
+                        2L+ agua e infusiones
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Formula Section -->
+        <section class="formula-section">
+            <h2 class="section-title">Sistema de Construcción - Protocolo Rosácea</h2>
+            <div class="formula-grid">
+                <div class="formula-card">
+                    <div class="formula-number">1</div>
+                    <h3 class="formula-title">Vegetales Seguros</h3>
+                    <div class="formula-content">
+                        Lechugas suaves, pepino<br>
+                        Brócoli, zucchini<br>
+                        Zapallitos, hongos<br>
+                        Puerro blanco, repollo<br>
+                        <strong>Sin límite - Tibios</strong>
+                    </div>
+                </div>
+                
+                <div class="formula-card">
+                    <div class="formula-number">2</div>
+                    <h3 class="formula-title">Proteína</h3>
+                    <div class="formula-content">
+                        Pollo orgánico: <strong>150g</strong><br>
+                        Carne magra: <strong>150g</strong><br>
+                        Pescado blanco: <strong>150g</strong><br>
+                        Huevos: <strong>2 unidades</strong>
+                    </div>
+                </div>
+                
+                <div class="formula-card">
+                    <div class="formula-number">3</div>
+                    <h3 class="formula-title">Grasas Curativas</h3>
+                    <div class="formula-content">
+                        Aceite oliva: <strong>2 cdas</strong><br>
+                        Ghee/Manteca: <strong>1 cda</strong><br>
+                        Aceite coco: <strong>1 cda</strong><br>
+                        Semillas: <strong>2 cdas</strong>
+                    </div>
+                </div>
+                
+                <div class="formula-card">
+                    <div class="formula-number">4</div>
+                    <h3 class="formula-title">Extras Permitidos</h3>
+                    <div class="formula-content">
+                        Caldo de hueso diario<br>
+                        Jengibre fresco<br>
+                        Hierbas: perejil, cilantro<br>
+                        Infusiones: manzanilla, té verde<br>
+                        <strong>Todo tibio</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Alert Box -->
+        <div class="alert">
+            <h3 class="alert-title">
+                <span class="alert-icon">⚠️</span>
+                Protocolo Específico Rosácea
+            </h3>
+            <ul>
+                <li><strong>NUNCA:</strong> Tomates, morrones, berenjenas, espinaca, acelga</li>
+                <li><strong>EVITAR:</strong> Picantes, vinagre, fermentados, cítricos (excepto gotas limón)</li>
+                <li><strong>TEMPERATURA:</strong> Todo tibio, nunca muy caliente</li>
+                <li><strong>FIBRA:</strong> Vegetales cocidos + 2L agua mínimo</li>
+                <li><strong>ENERGÍA:</strong> Caldo de hueso diario + grasas buenas abundantes</li>
+                <li><strong>CALORÍAS:</strong> No restringir, mínimo 1300 cal/día</li>
+            </ul>
+        </div>
+        
+        <!-- Shopping List Section -->
+        <section class="shopping-section">
+            <h2 class="section-title">Lista de Compras - Protocolo Rosácea</h2>
+            <div class="shopping-grid">
+                <div class="shopping-card">
+                    <div class="shopping-header">
+                        <span class="shopping-icon">🥩</span>
+                        <h3 class="shopping-title">Proteínas Seguras</h3>
+                    </div>
+                    <div class="shopping-list">
+                        <div class="shopping-item">□ Pollo orgánico (1.5 kg)</div>
+                        <div class="shopping-item">□ Carne magra grass-fed (1 kg)</div>
+                        <div class="shopping-item">□ Pescado blanco fresco (700g)</div>
+                        <div class="shopping-item">□ Carne picada magra (500g)</div>
+                        <div class="shopping-item">□ Huevos orgánicos (18 unidades)</div>
+                        <div class="shopping-item">□ Jamón crudo natural (150g)</div>
+                        <div class="shopping-item">□ Atún en aceite oliva (3 latas)</div>
+                    </div>
+                </div>
+                
+                <div class="shopping-card">
+                    <div class="shopping-header">
+                        <span class="shopping-icon">🥬</span>
+                        <h3 class="shopping-title">Vegetales Permitidos</h3>
+                    </div>
+                    <div class="shopping-list">
+                        <div class="shopping-item">□ Lechugas suaves (4 bolsas)</div>
+                        <div class="shopping-item">□ Pepinos (4 unidades)</div>
+                        <div class="shopping-item">□ Brócoli (3 unidades)</div>
+                        <div class="shopping-item">□ Zucchinis (5 unidades)</div>
+                        <div class="shopping-item">□ Zapallitos (4 unidades)</div>
+                        <div class="shopping-item">□ Hongos frescos (400g)</div>
+                        <div class="shopping-item">□ Puerro (2 unidades)</div>
+                        <div class="shopping-item">□ Repollo/col (1 unidad)</div>
+                        <div class="shopping-item">□ Perejil fresco</div>
+                        <div class="shopping-item">□ Cilantro fresco</div>
+                        <div class="shopping-item">□ Albahaca fresca</div>
+                    </div>
+                </div>
+                
+                <div class="shopping-card">
+                    <div class="shopping-header">
+                        <span class="shopping-icon">🥥</span>
+                        <h3 class="shopping-title">Grasas y Lácteos</h3>
+                    </div>
+                    <div class="shopping-list">
+                        <div class="shopping-item">□ Aceite oliva extra virgen (1L)</div>
+                        <div class="shopping-item">□ Aceite de coco (500ml)</div>
+                        <div class="shopping-item">□ Ghee (250g)</div>
+                        <div class="shopping-item">□ Manteca (200g)</div>
+                        <div class="shopping-item">□ Crema de coco (400ml)</div>
+                        <div class="shopping-item">□ Leche de coco sin azúcar (1L)</div>
+                        <div class="shopping-item">□ Paltas (2 - si toleras)</div>
+                    </div>
+                </div>
+                
+                <div class="shopping-card">
+                    <div class="shopping-header">
+                        <span class="shopping-icon">🌰</span>
+                        <h3 class="shopping-title">Semillas y Frutos</h3>
+                    </div>
+                    <div class="shopping-list">
+                        <div class="shopping-item">□ Almendras (300g)</div>
+                        <div class="shopping-item">□ Harina de almendras (250g)</div>
+                        <div class="shopping-item">□ Semillas calabaza (200g)</div>
+                        <div class="shopping-item">□ Semillas girasol (200g)</div>
+                        <div class="shopping-item">□ Semillas de chía (150g)</div>
+                        <div class="shopping-item">□ Linaza molida (100g)</div>
+                        <div class="shopping-item">□ Coco rallado sin azúcar (200g)</div>
+                    </div>
+                </div>
+                
+                <div class="shopping-card">
+                    <div class="shopping-header">
+                        <span class="shopping-icon">🍲</span>
+                        <h3 class="shopping-title">Base Caldos</h3>
+                    </div>
+                    <div class="shopping-list">
+                        <div class="shopping-item">□ Huesos con tuétano (2 kg)</div>
+                        <div class="shopping-item">□ Carcasas de pollo (1 kg)</div>
+                        <div class="shopping-item">□ Laurel</div>
+                        <div class="shopping-item">□ Romero fresco</div>
+                        <div class="shopping-item">□ Tomillo seco</div>
+                        <div class="shopping-item">□ Orégano seco</div>
+                    </div>
+                </div>
+                
+                <div class="shopping-card">
+                    <div class="shopping-header">
+                        <span class="shopping-icon">☕</span>
+                        <h3 class="shopping-title">Infusiones y Otros</h3>
+                    </div>
+                    <div class="shopping-list">
+                        <div class="shopping-item">□ Jengibre fresco (200g)</div>
+                        <div class="shopping-item">□ Té de manzanilla</div>
+                        <div class="shopping-item">□ Té verde</div>
+                        <div class="shopping-item">□ Flores de hibisco</div>
+                        <div class="shopping-item">□ Menta fresca</div>
+                        <div class="shopping-item">□ Cúrcuma en polvo</div>
+                        <div class="shopping-item">□ Canela en rama</div>
+                        <div class="shopping-item">□ Sal marina</div>
+                        <div class="shopping-item">□ Limones (4 - usar poco)</div>
+                        <div class="shopping-item">□ Stevia líquida</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="shopping-notes">
+                <h3 class="notes-title">📝 Notas Importantes</h3>
+                <ul class="notes-list">
+                    <li>Preparar caldo de hueso en cantidad (congelar porciones)</li>
+                    <li>Lavar y secar vegetales al comprar para facilitar la semana</li>
+                    <li>Cocinar proteínas extras para tener listas</li>
+                    <li>Tener siempre ghee y aceite de coco a mano</li>
+                    <li>Preparar postres sin azúcar el domingo</li>
+                    <li>Mantener infusiones siempre tibias, nunca calientes</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Recipes Section -->
+        <section class="recipes-section">
+            <h2 class="section-title">Recetas del Plan - Protocolo Rosácea</h2>
+            
+            <div class="recipe-grid">
+                <!-- Recetas del documento -->
+                <div class="recipe-card">
+                    <div class="recipe-header">
+                        <h3 class="recipe-title">🥗 SALTEADO DE CARNE Y VEGETALES SUAVES</h3>
+                        <span class="recipe-time">15 min</span>
+                    </div>
+                    <div class="recipe-content">
+                        <div class="ingredients">
+                            <h4>Ingredientes (2 porciones):</h4>
+                            <ul>
+                                <li>300g carne en tiritas (puede ser corte graso)</li>
+                                <li>1/2 blanco de puerro en juliana</li>
+                                <li>1 taza de brócoli en arbolitos pequeños</li>
+                                <li>1/2 zucchini en juliana</li>
+                                <li>1/4 repollo picado fino</li>
+                                <li>2 cdas mix de semillas (calabaza y girasol)</li>
+                                <li>2 cdas aceite de oliva o ghee</li>
+                                <li>Sal marina</li>
+                                <li>Jengibre fresco rallado (poquito)</li>
+                            </ul>
+                        </div>
+                        <div class="preparation">
+                            <h4>Preparación:</h4>
+                            <ol>
+                                <li>Saltear carne en ghee con sal. Reservar</li>
+                                <li>En mismo wok, saltear vegetales 3-4 minutos (primero puerro, luego brócoli y repollo, último zucchini)</li>
+                                <li>Revolver la carne, integrar</li>
+                                <li>Agregar semillas y aceite extra</li>
+                                <li>Servir tibio sobre verdes frescos</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-card">
+                    <div class="recipe-header">
+                        <h3 class="recipe-title">🍳 OMELETTE CREMOSO</h3>
+                        <span class="recipe-time">10 min</span>
+                    </div>
+                    <div class="recipe-content">
+                        <div class="ingredients">
+                            <h4>Ingredientes (1 porción):</h4>
+                            <ul>
+                                <li>2 huevos enteros</li>
+                                <li>1 cda crema de coco o leche de coco sin azúcar</li>
+                                <li>1 cda ghee o manteca</li>
+                                <li>2 fetas jamón crudo</li>
+                                <li>1/4 taza queso rallado sin lactosa (opcional)</li>
+                                <li>Ciboulette picado</li>
+                                <li>Sal marina</li>
+                            </ul>
+                        </div>
+                        <div class="preparation">
+                            <h4>Preparación:</h4>
+                            <ol>
+                                <li>Batir huevos + crema o leche de coco</li>
+                                <li>Derretir manteca o ghee en sartén</li>
+                                <li>Verter huevos, cocinar a fuego bajo</li>
+                                <li>Agregar jamón y queso en una mitad</li>
+                                <li>Doblar y servir con verdes o vegetales cocidos</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-card">
+                    <div class="recipe-header">
+                        <h3 class="recipe-title">🍗 POLLO CON COSTRA DE FRUTOS SECOS</h3>
+                        <span class="recipe-time">35 min</span>
+                    </div>
+                    <div class="recipe-content">
+                        <div class="ingredients">
+                            <h4>Ingredientes (1 porción):</h4>
+                            <ul>
+                                <li>200g muslos de pollo con piel</li>
+                                <li>1/4 taza almendras molidas</li>
+                                <li>2 cdas semillas de calabaza molidas</li>
+                                <li>2 cdas ghee derretido</li>
+                                <li>Sal marina, tomillo seco</li>
+                                <li>Aceite de coco</li>
+                            </ul>
+                        </div>
+                        <div class="preparation">
+                            <h4>Preparación:</h4>
+                            <ol>
+                                <li>Secar bien el pollo, salpimentar</li>
+                                <li>Mezclar almendras, semillas, ghee, sal</li>
+                                <li>Cubrir pollo con mezcla</li>
+                                <li>Hornear 180°C por 35 minutos</li>
+                                <li>Servir con ensalada verde y paltas en cubitos 1/4</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-card">
+                    <div class="recipe-header">
+                        <h3 class="recipe-title">🍲 ALBÓNDIGAS DE CARNE EN CALDO</h3>
+                        <span class="recipe-time">30 min</span>
+                    </div>
+                    <div class="recipe-content">
+                        <div class="ingredients">
+                            <h4>Ingredientes (2 porciones):</h4>
+                            <ul>
+                                <li>200g carne picada magra</li>
+                                <li>1 huevo</li>
+                                <li>2 cdas semillas de chía (ligante)</li>
+                                <li>Perejil picado</li>
+                                <li>Sal marina</li>
+                                <li>2 tazas caldo de hueso</li>
+                                <li>Puerro y zucchini picados</li>
+                            </ul>
+                        </div>
+                        <div class="preparation">
+                            <h4>Preparación:</h4>
+                            <ol>
+                                <li>Mezclar carne, huevo, chía, perejil, sal</li>
+                                <li>Formar 8 albóndigas pequeñas</li>
+                                <li>Hervir caldo con vegetales</li>
+                                <li>Cocinar albóndigas 15 min en caldo</li>
+                                <li>Servir como sopa con aceite de oliva</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-card">
+                    <div class="recipe-header">
+                        <h3 class="recipe-title">🐟 PESCADO BLANCO EN PAPILLOTE</h3>
+                        <span class="recipe-time">25 min</span>
+                    </div>
+                    <div class="recipe-content">
+                        <div class="ingredients">
+                            <h4>Ingredientes (1 porción):</h4>
+                            <ul>
+                                <li>200g pescado blanco (merluza/lenguado)</li>
+                                <li>2 cdas de aceite de oliva</li>
+                                <li>Juliana de puerro</li>
+                                <li>Rodajas de zucchini fino</li>
+                                <li>Eneldo fresco</li>
+                                <li>Sal marina</li>
+                            </ul>
+                        </div>
+                        <div class="preparation">
+                            <h4>Preparación:</h4>
+                            <ol>
+                                <li>En papel aluminio, colocar pescado</li>
+                                <li>Cubrir con aceite de oliva y vegetales cortados en juliana</li>
+                                <li>Cerrar hermético</li>
+                                <li>Hornear 180°C por 20 minutos</li>
+                                <li>Servir con vegetales verdes</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-card">
+                    <div class="recipe-header">
+                        <h3 class="recipe-title">🍔 HAMBURGUESAS + VEGETALES HORNEADOS</h3>
+                        <span class="recipe-time">20 min</span>
+                    </div>
+                    <div class="recipe-content">
+                        <div class="ingredients">
+                            <h4>Ingredientes (2 hamburguesas):</h4>
+                            <ul>
+                                <li>200g carne picada</li>
+                                <li>1 huevo</li>
+                                <li>Sal marina, mostaza antigua</li>
+                                <li>2 cdas ghee para cocinar</li>
+                                <li>Hojas de lechuga para envolver</li>
+                            </ul>
+                        </div>
+                        <div class="preparation">
+                            <h4>Preparación:</h4>
+                            <ol>
+                                <li>Mezclar carne, huevo, sal</li>
+                                <li>Formar 2 hamburguesas gruesas</li>
+                                <li>Cocinar en ghee hasta que estén cocidas</li>
+                                <li>Servir envueltas en lechuga</li>
+                                <li>Acompañar con muchos vegetales</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-card">
+                    <div class="recipe-header">
+                        <h3 class="recipe-title">🥣 SOPA CREMOSA DE BRÓCOLI</h3>
+                        <span class="recipe-time">25 min</span>
+                    </div>
+                    <div class="recipe-content">
+                        <div class="ingredients">
+                            <h4>Ingredientes (2 porciones):</h4>
+                            <ul>
+                                <li>2 tazas brócoli en flores</li>
+                                <li>1/2 puerro</li>
+                                <li>2 tazas caldo de hueso</li>
+                                <li>150ml crema de leche</li>
+                                <li>3 cdas mantequilla</li>
+                                <li>Sal marina</li>
+                                <li>Aceite de oliva para servir</li>
+                            </ul>
+                        </div>
+                        <div class="preparation">
+                            <h4>Preparación:</h4>
+                            <ol>
+                                <li>Saltear puerro en mantequilla</li>
+                                <li>Agregar brócoli, cubrir con caldo</li>
+                                <li>Cocinar 15 minutos</li>
+                                <li>Licuar con crema</li>
+                                <li>Servir con chorrito de aceite</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-card">
+                    <div class="recipe-header">
+                        <h3 class="recipe-title">🥗 ENSALADA COMPLETA</h3>
+                        <span class="recipe-time">10 min</span>
+                    </div>
+                    <div class="recipe-content">
+                        <div class="ingredients">
+                            <h4>Ingredientes (1 porción):</h4>
+                            <ul>
+                                <li>Mix lechugas, pepino, repollo</li>
+                                <li>2 huevos duros</li>
+                                <li>100g atún en aceite de oliva</li>
+                                <li>1/2 palta pequeña (opcional)</li>
+                                <li>2 cdas aceite de oliva extra</li>
+                                <li>Semillas variadas</li>
+                            </ul>
+                        </div>
+                        <div class="preparation">
+                            <h4>Preparación:</h4>
+                            <ol>
+                                <li>Base de verdes en platos</li>
+                                <li>Agregar huevos en gajos</li>
+                                <li>Atún desmenuzado con su aceite</li>
+                                <li>Palta en cubos</li>
+                                <li>Mayonesa y aceite extra por encima</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-card">
+                    <div class="recipe-header">
+                        <h3 class="recipe-title">🥩 CARNE DESMECHADA CON HONGOS</h3>
+                        <span class="recipe-time">2 horas</span>
+                    </div>
+                    <div class="recipe-content">
+                        <div class="ingredients">
+                            <h4>Ingredientes (2 porciones):</h4>
+                            <ul>
+                                <li>200g carne para desmechar</li>
+                                <li>200g champiñones frescos</li>
+                                <li>1/2 cebolla (cocida, opcional)</li>
+                                <li>2 cdas aceite de coco</li>
+                                <li>Caldo de hueso</li>
+                                <li>Sal marina, orégano</li>
+                            </ul>
+                        </div>
+                        <div class="preparation">
+                            <h4>Preparación:</h4>
+                            <ol>
+                                <li>Cocinar carne en caldo 2 horas (olla presión: 45 min)</li>
+                                <li>Desmechar con tenedores</li>
+                                <li>Saltear hongos en aceite de coco</li>
+                                <li>Mezclar carne con hongos</li>
+                                <li>Servir sobre base de lechugas</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-card">
+                    <div class="recipe-header">
+                        <h3 class="recipe-title">🥧 PASTEL DE CARNE INDIVIDUAL</h3>
+                        <span class="recipe-time">30 min</span>
+                    </div>
+                    <div class="recipe-content">
+                        <div class="ingredients">
+                            <h4>Ingredientes (2 porciones):</h4>
+                            <ul>
+                                <li>200g carne picada o pollo</li>
+                                <li>2 huevos enteros</li>
+                                <li>1 taza brócoli picado fino</li>
+                                <li>2 cdas ghee derretido</li>
+                                <li>Sal marina</li>
+                                <li>Albahaca fresca</li>
+                            </ul>
+                        </div>
+                        <div class="preparation">
+                            <h4>Preparación:</h4>
+                            <ol>
+                                <li>Mezclar carne cruda con 1 huevo, sal</li>
+                                <li>Dividir en 2 moldes individuales</li>
+                                <li>Hacer hueco en centro</li>
+                                <li>Batir 1 huevo con ghee</li>
+                                <li>Verter en el centro</li>
+                                <li>Hornear 180°C por 25 min</li>
+                                <li>Servir con ensalada</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-card">
+                    <div class="recipe-header">
+                        <h3 class="recipe-title">🥩 CARNE SELLADA CON VEGETALES ASADOS</h3>
+                        <span class="recipe-time">30 min</span>
+                    </div>
+                    <div class="recipe-content">
+                        <div class="ingredients">
+                            <h4>Ingredientes (2 porciones):</h4>
+                            <ul>
+                                <li>2 bifes (100g cada uno)</li>
+                                <li>1 zapallito en rodajas</li>
+                                <li>1/2 zucchini en rodajas</li>
+                                <li>Hongos portobello en láminas</li>
+                                <li>2 cdas aceite de oliva</li>
+                                <li>Romero fresco</li>
+                                <li>Sal marina gruesa</li>
+                            </ul>
+                        </div>
+                        <div class="preparation">
+                            <h4>Preparación:</h4>
+                            <ol>
+                                <li>Vegetales al horno con aceite y romero (20 min)</li>
+                                <li>Sellar bifes 2 min por lado</li>
+                                <li>Dejar reposar 5 min</li>
+                                <li>Cortar en tiras</li>
+                                <li>Servir con vegetales tibios</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-card">
+                    <div class="recipe-header">
+                        <h3 class="recipe-title">🍲 ESTOFADO RÁPIDO DE CARNE</h3>
+                        <span class="recipe-time">35 min</span>
+                    </div>
+                    <div class="recipe-content">
+                        <div class="ingredients">
+                            <h4>Ingredientes (2 porciones):</h4>
+                            <ul>
+                                <li>200g carne en cubos</li>
+                                <li>1/2 taza caldo de hueso</li>
+                                <li>1/2 zucchini en trozos</li>
+                                <li>1/2 puerro en rodajas</li>
+                                <li>2 cdas aceite de oliva</li>
+                                <li>Laurel, sal marina</li>
+                            </ul>
+                        </div>
+                        <div class="preparation">
+                            <h4>Preparación:</h4>
+                            <ol>
+                                <li>Sellar carne en aceite</li>
+                                <li>Agregar vegetales, saltear 2 min</li>
+                                <li>Cubrir con caldo, agregar laurel</li>
+                                <li>Cocinar tapado 30 min</li>
+                                <li>Servir con aceite de oliva extra</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Semáforo de Alimentos -->
+        <section class="semaforo-section">
+            <h2 class="section-title">Semáforo de Alimentos - Protocolo Rosácea</h2>
+            
+            <div class="semaforo-grid">
+                <!-- Verde - Permitidos -->
+                <div class="semaforo-card verde">
+                    <div class="semaforo-header">
+                        <span class="semaforo-icon">🟢</span>
+                        <h3 class="semaforo-title">ALIMENTOS PERMITIDOS (BASE DIARIA)</h3>
+                    </div>
+                    <div class="semaforo-content">
+                        <div class="categoria">
+                            <h4>PROTEÍNAS (150g por comida):</h4>
+                            <ul>
+                                <li>✅ Pollo orgánico (mejor opción)</li>
+                                <li>✅ Pescados blancos: merluza, lenguado, abadejo</li>
+                                <li>✅ Huevos</li>
+                                <li>✅ Carne vacuna magra alimentada a pasto</li>
+                                <li>✅ Cerdo: solomillo, lomo</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="categoria">
+                            <h4>VEGETALES LIBRES (sin límite):</h4>
+                            <ul>
+                                <li>✅ Lechugas suaves (mantecosa, capuchina)</li>
+                                <li>✅ Pepino</li>
+                                <li>✅ Apio</li>
+                                <li>✅ Brócoli</li>
+                                <li>✅ Coliflor</li>
+                                <li>✅ Repollo/col</li>
+                                <li>✅ Calabacín/zucchini</li>
+                                <li>✅ Espárragos</li>
+                                <li>✅ Puerro (parte blanca)</li>
+                                <li>✅ Hongos frescos</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="categoria">
+                            <h4>GRASAS (2-3 cdas por comida):</h4>
+                            <ul>
+                                <li>✅ Aceite de oliva extra virgen</li>
+                                <li>✅ Aceite de coco</li>
+                                <li>✅ Ghee (con moderación)</li>
+                                <li>✅ Manteca (poca cantidad)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="categoria">
+                            <h4>OTROS PERMITIDOS:</h4>
+                            <ul>
+                                <li>✅ Sal marina</li>
+                                <li>✅ Jengibre fresco</li>
+                                <li>✅ Hierbas frescas: perejil, cilantro, albahaca</li>
+                                <li>✅ Semillas: calabaza, girasol (2 cdas/día)</li>
+                                <li>✅ Caldo de hueso</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Amarillo - Precaución -->
+                <div class="semaforo-card amarillo">
+                    <div class="semaforo-header">
+                        <span class="semaforo-icon">🟡</span>
+                        <h3 class="semaforo-title">ALIMENTOS CON PRECAUCIÓN (TESTEAR TOLERANCIA)</h3>
+                    </div>
+                    <div class="semaforo-content">
+                        <div class="categoria">
+                            <h4>USAR POCO Y OBSERVAR:</h4>
+                            <ul>
+                                <li>⚠️ Palta (1/4 unidad máximo)</li>
+                                <li>⚠️ Limón (pocas gotas)</li>
+                                <li>⚠️ Frutos secos (10 unidades/día)</li>
+                                <li>⚠️ Quesos sin lactosa (30g ocasional)</li>
+                                <li>⚠️ Mostaza</li>
+                                <li>⚠️ Cebolla (solo cocida, poca)</li>
+                                <li>⚠️ Ajo (1 diente cocido)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Rojo - Prohibidos -->
+                <div class="semaforo-card rojo">
+                    <div class="semaforo-header">
+                        <span class="semaforo-icon">🔴</span>
+                        <h3 class="semaforo-title">ALIMENTOS PROHIBIDOS (TRIGGERS ROSÁCEA)</h3>
+                    </div>
+                    <div class="semaforo-content">
+                        <div class="categoria">
+                            <h4>VEGETALES INFLAMATORIOS:</h4>
+                            <ul>
+                                <li>❌ Tomates (todos los tipos)</li>
+                                <li>❌ Morrones</li>
+                                <li>❌ Berenjenas</li>
+                                <li>❌ Espinacas</li>
+                                <li>❌ Acelga</li>
+                                <li>❌ Remolacha</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="categoria">
+                            <h4>ESPECIAS Y CONDIMENTOS:</h4>
+                            <ul>
+                                <li>❌ Pimienta (toda)</li>
+                                <li>❌ Pimentón/paprika</li>
+                                <li>❌ Chile/ají</li>
+                                <li>❌ Especias picantes</li>
+                                <li>❌ Vinagre (todos)</li>
+                                <li>❌ Salsa de soja/tamari</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="categoria">
+                            <h4>ALIMENTOS FERMENTADOS:</h4>
+                            <ul>
+                                <li>❌ Kéfir</li>
+                                <li>❌ Kombucha</li>
+                                <li>❌ Chucrut</li>
+                                <li>❌ Kimchi</li>
+                                <li>❌ Miso</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="categoria">
+                            <h4>OTROS PROHIBIDOS:</h4>
+                            <ul>
+                                <li>❌ Chocolate (incluso 85%)</li>
+                                <li>❌ Mariscos</li>
+                                <li>❌ Embutidos/procesados</li>
+                                <li>❌ Lácteos (excepto ghee/manteca)</li>
+                                <li>❌ Cítricos (excepto gotas de limón)</li>
+                                <li>❌ Bebidas calientes</li>
+                                <li>❌ Alcohol</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="categoria">
+                            <h4>NO KETO (OBVIOS):</h4>
+                            <ul>
+                                <li>❌ Frutas (todas)</li>
+                                <li>❌ Legumbres</li>
+                                <li>❌ Cereales</li>
+                                <li>❌ Tubérculos (papa, boniato)</li>
+                                <li>❌ Azúcares</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="semaforo-reglas">
+                <h3 class="reglas-title">📋 REGLAS SIMPLES PARA RECORDAR:</h3>
+                <ol>
+                    <li><strong>VERDE = SÍ</strong> (vegetales verdes son seguros)</li>
+                    <li><strong>ROJO = NO</strong> (tomates, morrones, picantes)</li>
+                    <li><strong>FERMENTADO = NO</strong> (aumenta histamina)</li>
+                    <li><strong>CALIENTE = NO</strong> (todo tibio)</li>
+                    <li><strong>SIMPLE = MEJOR</strong> (pocos ingredientes)</li>
+                </ol>
+            </div>
+        </section>
+        
+        <!-- Tips Section -->
+        <section class="tips-section">
+            <h2 class="section-title">Estrategias para tu Éxito</h2>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-icon">🍲</div>
+                    <h3 class="tip-title">Caldo Diario</h3>
+                    <p class="tip-text">1-2 tazas de caldo de hueso al día. Cura intestino, da energía y mejora la piel.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <div class="tip-icon">🌡️</div>
+                    <h3 class="tip-title">Todo Tibio</h3>
+                    <p class="tip-text">Nunca consumir alimentos muy calientes. Dejar enfriar 5 minutos antes de comer.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <div class="tip-icon">💧</div>
+                    <h3 class="tip-title">Hidratación+</h3>
+                    <p class="tip-text">Mínimo 2L agua + infusiones. Combate fatiga.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <div class="tip-icon">🥥</div>
+                    <h3 class="tip-title">Grasas Buenas</h3>
+                    <p class="tip-text">No limitar grasas. Necesarias para energía y hormonas.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <div class="tip-icon">🥜</div>
+                    <h3 class="tip-title">Snacks Permitidos</h3>
+                    <p class="tip-text">Si hay hambre real: 10 almendras o 5 nueces entre comidas.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <div class="tip-icon">⏰</div>
+                    <h3 class="tip-title">Batch Cooking</h3>
+                    <p class="tip-text">Cocinar para 2-3 días. Tener siempre caldo, proteínas y vegetales listos.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
